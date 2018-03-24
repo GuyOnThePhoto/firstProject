@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="first_name">First name</string>
+    <string name="firstname">Firstname</string>
+    <string name="login_view">Login View</string>
+    <string name="main_activity_error_message">Login or password is incorrect</string>
+    <string name="login">Login</string>
+    <string name="nickname">Nickname</string>
+    <string name="success_login_message">Login successful</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

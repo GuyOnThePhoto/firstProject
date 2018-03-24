@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.slavik.myapplication.userInfoActivity.UserInfoActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/userInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/login_view"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/registerTitleTextView"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Registration"
+                android:textColor="#4b8c4b"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/loginRegisterTextView"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="20dp"
+                android:text="Login : "
+                android:textColor="#000"
+                android:textSize="30dp" />
+
+            <EditText
+                android:id="@+id/loginRegisterEditText"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:hint="Enter your Login "
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/firstnameRegisterTextView"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="20dp"
+                android:text="Firstname :  "
+                android:textColor="#000"
+                android:textSize="30dp" />
+
+            <EditText
+                android:id="@+id/firstnameRegisterEditText"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:hint="Enter your Firstname "
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/lastnameRegisterTextView"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="20dp"
+                android:text="Lastname :  "
+                android:textColor="#000"
+                android:textSize="30dp" />
+
+            <EditText
+                android:id="@+id/lastnameRegisterEditText"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:hint="Enter your Lastname "
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/passwordRegisterTextView"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="20dp"
+                android:text="Password :  "
+                android:textColor="#000"
+                android:textSize="30dp" />
+
+
+            <EditText
+                android:id="@+id/passwordRegisterEditText"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:hint="Enter your Lastname "
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/passwordConfirmRegisterTextView"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="20dp"
+                android:text="Confirm Password :  "
+                android:textColor="#000"
+                android:textSize="30dp" />
+
+            <EditText
+                android:id="@+id/passwordConfirmRegisterEditText"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:hint="Confirm your password "
+                android:text=""/>
+
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Register"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
