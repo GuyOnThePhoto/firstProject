@@ -21,9 +21,10 @@ public class LoginPresenter implements ILoginPresenter {
         user = database.findUser(login);
         if (user == null) {
             view.showErrorMessage();
+            return null;
         }
         if (isPasswordCorrect(user.getPassword())) {
-
+        view.showErrorMessage();
         }
         return user;
     }

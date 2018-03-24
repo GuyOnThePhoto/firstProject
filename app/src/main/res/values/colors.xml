@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="errorMessageColor">#b13735</color>
+    <color name="registerTitleColor">#4B8C4B</color>
 </resources>

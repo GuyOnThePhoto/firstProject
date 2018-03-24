@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityVie
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (areFieldsEmpty()) {
+                if (!areFieldsEmpty()) {
                     login = editTextLoginField.getText().toString();
                     password = editTextPasswordField.getText().toString();
                 } else {
@@ -55,6 +55,7 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityVie
                 startActivity(intent);
             }
         });
+
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

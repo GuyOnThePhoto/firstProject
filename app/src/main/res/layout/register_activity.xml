@@ -11,129 +11,164 @@
         android:layout_height="fill_parent"
         android:orientation="vertical">
 
-        <LinearLayout
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/userInfo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/login_view"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/registerTitleTextView"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Registration"
-                android:textColor="#4b8c4b"
-                android:textSize="30dp" />
+                android:text="@string/registration"
+                android:textColor="#@color/errorMessageColor"
+                android:textSize="30dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/errorRegisterTextView"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/registration"
+                android:textColor="@color/registerTitleColor"
+                android:textSize="30dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
                 android:id="@+id/loginRegisterTextView"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="2dp"
                 android:layout_marginTop="20dp"
                 android:text="Login : "
                 android:textColor="#000"
-                android:textSize="30dp" />
+                android:textSize="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/registerTitleTextView"/>
 
             <EditText
                 android:id="@+id/loginRegisterEditText"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="90dp"
+                android:layout_marginStart="8dp"
                 android:hint="Enter your Login "
-                android:text=""/>
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginRegisterTextView" />
 
             <TextView
                 android:id="@+id/firstnameRegisterTextView"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="2dp"
                 android:layout_marginTop="20dp"
                 android:text="Firstname :  "
                 android:textColor="#000"
-                android:textSize="30dp" />
+                android:textSize="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginRegisterEditText"/>
 
             <EditText
                 android:id="@+id/firstnameRegisterEditText"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="90dp"
+
                 android:hint="Enter your Firstname "
-                android:text=""/>
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstnameRegisterTextView" />
 
             <TextView
                 android:id="@+id/lastnameRegisterTextView"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="20dp"
                 android:text="Lastname :  "
                 android:textColor="#000"
-                android:textSize="30dp" />
+                android:textSize="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstnameRegisterEditText"/>
 
             <EditText
                 android:id="@+id/lastnameRegisterEditText"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="90dp"
                 android:hint="Enter your Lastname "
-                android:text=""/>
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lastnameRegisterTextView" />
 
             <TextView
                 android:id="@+id/passwordRegisterTextView"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="2dp"
                 android:layout_marginTop="20dp"
                 android:text="Password :  "
                 android:textColor="#000"
-                android:textSize="30dp" />
+                android:textSize="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lastnameRegisterEditText"/>
 
 
             <EditText
                 android:id="@+id/passwordRegisterEditText"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="90dp"
                 android:hint="Enter your Lastname "
-                android:text=""/>
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/passwordRegisterTextView" />
 
             <TextView
                 android:id="@+id/passwordConfirmRegisterTextView"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="2dp"
                 android:layout_marginTop="20dp"
                 android:text="Confirm Password :  "
                 android:textColor="#000"
-                android:textSize="30dp" />
+                android:textSize="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/passwordRegisterEditText"/>
 
             <EditText
                 android:id="@+id/passwordConfirmRegisterEditText"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="90dp"
                 android:hint="Confirm your password "
-                android:text=""/>
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/passwordConfirmRegisterTextView" />
 
             <Button
                 android:id="@+id/registerButton"
@@ -141,9 +176,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Register"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/passwordConfirmRegisterEditText"/>
 
-        </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
 
     </ScrollView>
 

@@ -18,7 +18,7 @@ public class DatabaseImpl implements Database {
     private UserDatabase database;
 
     public DatabaseImpl(Context context){
-        database = Room.databaseBuilder(context, UserDatabase.class, DATABASE_NAME).build();
+        database = Room.databaseBuilder(context, UserDatabase.class, DATABASE_NAME).allowMainThreadQueries().build();
     }
 
     @Override
