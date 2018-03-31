@@ -8,5 +8,6 @@ import com.example.slavik.myapplication.model.User;
 
 public interface Database {
    void saveUser(User user);
+
    User findUser(String login);
 }

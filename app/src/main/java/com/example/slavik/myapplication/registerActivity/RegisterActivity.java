@@ -17,6 +17,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView{
     private EditText passwordConfirmRegisterEditText;
     private Button registerButton;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,4 +33,13 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView{
 
     }
 
+    @Override
+    public boolean areFieldsEmpty() {
+    return false;
+    }
+
+    @Override
+    public void showErrorMessage() {
+
+    }
 }

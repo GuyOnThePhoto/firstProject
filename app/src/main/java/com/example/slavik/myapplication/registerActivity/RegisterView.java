@@ -6,5 +6,5 @@ package com.example.slavik.myapplication.registerActivity;
 
 public interface RegisterView {
     boolean areFieldsEmpty();
-
+    void showErrorMessage();
 }
