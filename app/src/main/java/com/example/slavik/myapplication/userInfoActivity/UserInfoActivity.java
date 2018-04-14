@@ -6,19 +6,20 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.example.slavik.myapplication.R;
+import com.example.slavik.myapplication.database.DatabaseImpl;
+import com.example.slavik.myapplication.model.User;
 
 public class UserInfoActivity extends AppCompatActivity implements UserInfoView {
 
     private final String LOG_TAG = "UserActivity log";
-    private TextView loginTextView;
-    private TextView firstnameTextView;
-    private TextView passwordTextView;
     private TextView loginShow;
-    private TextView firstnameShow;
     private TextView passwordShow;
+    private TextView firstNameShow;
+    private TextView lastNameView;
+    private User user;
+    private IUserInfoPresenter presenter;
 
     private String login = "";
-    private String password = "";
 
     Intent intent;
 
@@ -26,23 +27,30 @@ public class UserInfoActivity extends AppCompatActivity implements UserInfoView 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_info_activity);
-
-        loginTextView = findViewById(R.id.editTextLoginField);
-        firstnameTextView = findViewById(R.id.firstnameShow);
-        passwordTextView = findViewById(R.id.passwordTextView);
         loginShow = findViewById(R.id.loginShow);
-        firstnameShow = findViewById(R.id.firstnameShow);
         passwordShow = findViewById(R.id.passwordShow);
+        firstNameShow = findViewById(R.id.firstNameShow);
+        lastNameView = findViewById(R.id.lastNameShow);
 
         intent = getIntent();
 
         login = intent.getStringExtra(getResources().getString(R.string.login));
-        loginShow.setText(password);
-
-        login = intent.getStringExtra(getResources().getString(R.string.password));
-        passwordShow.setText(password);
+        loginShow.setText(login);
 
 
+        presenter = new UserInfoPresenter(new DatabaseImpl(UserInfoActivity.this), UserInfoActivity.this);
+        user = presenter.getUserFromDatabase(login);
 
+        if (user != null){
+            showUserInfo();
+        }
+    }
+
+    @Override
+    public void showUserInfo() {
+        loginShow.setText(user.getLogin());
+        passwordShow.setText(user.getPassword());
+        firstNameShow.setText(user.getFirstName());
+        lastNameView.setText(user.getLastName());
     }
 }

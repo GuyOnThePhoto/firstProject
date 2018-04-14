@@ -5,4 +5,5 @@ package com.example.slavik.myapplication.userInfoActivity;
  */
 
 public interface UserInfoView {
+    void showUserInfo();
 }
